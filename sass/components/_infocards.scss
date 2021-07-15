@@ -1,0 +1,38 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.info-card-container {
+  margin-top: 3em;
+  margin-bottom: 6em;
+  display: inline-flex;
+  gap: 10px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.info-card {
+  min-width: 120px;
+  border: 1px solid $dark;
+  border-radius: 8px;
+  padding: 35px 15px 8px 15px;
+  text-align: center;
+
+  @include for-phone-only {
+    width: 115px;
+    padding: 20px 8px 5px 8px;
+    font-size: 0.9em;
+  }
+
+  h5 {
+    color: $darkgreen;
+    margin: 0.7em;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  p {
+    font-size: 0.9em;
+    color: $grey;
+    line-height: 1.8em;
+    text-align: left;
+  }
+}

@@ -1,0 +1,33 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.product-info-button-container {
+  // display: flex;
+  // justify-content: space-around;
+  white-space: nowrap;
+
+  button {
+    display: inline-block;
+    text-align: center;
+    width: calc(50% - 8px);
+    width: -webkit-calc(50% - 8px);
+    margin: 4px;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 16px 0px;
+  border-radius: 50px;
+  border: none;
+}
+
+.btn-orange {
+  background-color: $orange;
+  color: $white;
+}
+
+.btn-green {
+  background-color: $lightgreen;
+  color: $dark;
+}

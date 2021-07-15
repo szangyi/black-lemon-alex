@@ -1,5 +1,20 @@
-.product-info {
-  h1 {
-    font-family: "Roboto";
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.product-banner {
+  position: relative;
+
+  @include for-phone-only {
+    background: url(/public/imgs/Fish_Oil-2.png);
+    background-size: cover;
+    width: 100%;
+    height: 100vw;
+  }
+
+  @include for-tablet-portrait-up {
+    background: url(/public/imgs/Fish_Oil-1.png);
+    background-size: cover;
+    width: 100%;
+    height: 60vw;
   }
 }

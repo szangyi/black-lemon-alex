@@ -1,0 +1,96 @@
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+.product-image {
+  position: absolute;
+  margin: auto auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  @include for-phone-only {
+    background: url(/imgs/NJORD-fiskeolie\-2.png);
+    background-size: cover;
+    width: 70vw;
+    height: 80%;
+  }
+
+  @include for-tablet-portrait-up {
+    background: url(/imgs/NJORD-fiskeolie-1.png);
+    background-size: cover;
+    width: 35vw;
+    height: 85%;
+  }
+}
+
+.product-info {
+  & > * {
+    margin: 0;
+    & > * {
+      margin: 0;
+    }
+  }
+
+  @include for-phone-only {
+    margin-top: 2em;
+  }
+
+  @include for-tablet-portrait-up {
+    @media (min-width: 900px) {
+      top: 7vw;
+      width: 40%;
+      position: absolute;
+      margin-top: 0 !important;
+    }
+
+    @media (min-width: 1000px) {
+      top: 11vw;
+    }
+
+    @media (min-width: 1100px) {
+      top: 18vw;
+    }
+
+    @media (min-width: 1200px) {
+      top: 22vw;
+    }
+  }
+
+  h1 {
+    font-family: $headline-font;
+    font-weight: 700;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+  }
+
+  .product-type {
+    margin-bottom: 1em;
+    p {
+      display: inline-flex;
+    }
+    p:nth-of-type(2) {
+      color: $darkgreen;
+      font-weight: 500;
+    }
+  }
+
+  .product-info-product-details {
+    h2 {
+      font-family: $headline-font;
+      margin-bottom: 0.7em;
+      font-size: 0.9em;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+  }
+  h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+}
