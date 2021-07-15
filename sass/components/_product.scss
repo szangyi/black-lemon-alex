@@ -37,6 +37,7 @@
   }
 
   @include for-tablet-portrait-up {
+    margin-top: 2em;
     @media (min-width: 900px) {
       top: 7vw;
       width: 40%;
