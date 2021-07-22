@@ -13,6 +13,14 @@
     width: -webkit-calc(50% - 8px);
     margin: 4px;
   }
+
+  button:first-of-type {
+    margin-left: 0px !important;
+  }
+
+  button:last-of-type {
+    margin-right: 0px !important;
+  }
 }
 
 button {
